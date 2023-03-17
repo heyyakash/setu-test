@@ -7,6 +7,7 @@ const user = new Schema({
     name:{...req,type:String},
     email:{...req,type:String},
     uid:{...req,type:String},
+    consentId:{...req,type:String}, 
     mobile:{...req,type:Number},
     date:{type:Date,default:Date.now},
     aadhar:{...req,type:Number},
