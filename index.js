@@ -3,6 +3,8 @@ const connectToDB = require("./mongoose/connect")
 const app = express()
 const loginRoutes = require('./routes/auth.routes')
 const setuRoutes = require("./routes/setu.routes")
+const userRoutes = require("./routes/user.routes")
+const bankRoutes = require("./routes/bank.routes")
 const cors = require("cors")
 
 //middleware
@@ -21,7 +23,8 @@ app.get('/', (req, res) => {
 //routes
 app.use('/auth',loginRoutes)
 app.use('/setu',setuRoutes)
-
+app.use('/user',userRoutes)
+app.use('/bank',bankRoutes)
 
 //init
 try {

@@ -10,15 +10,15 @@ const user = new Schema({
     consentId:{...req,type:String}, 
     mobile:{...req,type:Number},
     date:{type:Date,default:Date.now},
-    aadhar:{...req,type:Number},
+    aadhar:{...req,type:Number}, 
+    udyam:{...req,type:String},
+    gst:{...req,type:String},
+    pan:{...req,type:String},
     businessType:{...req,type:String},
     coords:{...req,
-        type:Map,
-        of: new Schema({
-            lat:mongoose.Decimal128,
-            lng:mongoose.Decimal128 
-        })
+        type:Map
     },
+    grossIncome:{...req,type:Number},
     city:{...req,type:String},
     state:{...req,type:String},
     age:{type:Number,default:0},
